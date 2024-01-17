@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-remove-client-certificate-mapping" version="0.0.1">
+  <name>Client authentication certificate chain cleanup</name>
+  <description>Cordova Plugin to clean up current certificate key chain to enable selection of new certificate</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,client,certificate,authentication</keywords>
+  <js-module src="www/certificateAuthenticationChain.js" name="certificateAuthenticationChain">
+    <clobbers target="cordova.plugins.certificateAuthenticationChain"/>
+  </js-module>
+
+  <platform name="android">
+    <config-file target="config.xml" parent="/*">
+      <feature name="ClientCertificateAuthenticationChain">
+        <param name="android-package" value="de.bfpi.cordova.client.CertificateAuthenticationChain"/>
+      </feature>
+    </config-file>
+    <source-file src="src/de/bfpi/cordova/client/CertificateAuthenticationChain.java" target-dir="src/de/bfpi/cordova/client"/>
+  </platform>
+</plugin>

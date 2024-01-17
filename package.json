@@ -1,0 +1,23 @@
+{
+  "name": "cordova-plugin-remove-client-certificate-mapping",
+  "version": "0.0.1",
+  "description": "Cordova Plugin to clean up current certificate key chain to enable selection of new certificate",
+  "cordova": {
+    "id": "cordova-plugin-remove-client-certificate-mapping",
+    "platforms": ["android"]
+  },
+  "keywords": [
+    "cordova",
+    "client",
+    "certificate",
+    "authentication",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": {
+    "name": "BFPI Büro für praktische Informatik GmbH",
+    "email": "info@bfpi.de",
+    "url": "https://bfpi.de"
+  },
+  "license": "Apache 2.0"
+}
